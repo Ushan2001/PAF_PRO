@@ -142,12 +142,3 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 **Programming Applications and Frameworks (IT3030)**  
 **2025 Semester 2**
 
-
-### Notes:
-1. Replace placeholder values (like logo, GitHub URL, etc.) with your actual project details
-2. Add your specific database technology and any other tools/libraries you're using
-3. Include a link to your actual API documentation when available
-4. Add any additional sections that might be relevant to your project
-5. Consider adding screenshots or demo GIFs once the UI is developed
-
-You can customize this template further based on your specific project requirements and additional details you want to highlight.
