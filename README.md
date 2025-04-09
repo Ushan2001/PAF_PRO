@@ -77,7 +77,7 @@ SkillSwap is a platform where users can:
 ### Backend Setup
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/skillswap.git
+git clone https://github.com/Ushan2001/PAF_PRO.git
 
 # Navigate to backend directory
 cd skillswap/backend
