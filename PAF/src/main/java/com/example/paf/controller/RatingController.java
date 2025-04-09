@@ -16,7 +16,7 @@ public class RatingController {
     @Autowired
     private RatingService ratingService;
 
-    @GetMapping("/getratings")
+    @GetMapping("/ratings")
     public List<RatingDTO> getRatings() {
         return ratingService.getAllOrders();
     }
@@ -26,17 +26,17 @@ public class RatingController {
         return ratingService.getRatingById(ratingId);
     }
 
-    @PostMapping("/addrating")
+    @PostMapping("/rating")
     public RatingDTO saveRating(@RequestBody RatingDTO ratingDTO) {
         return ratingService.saveRating(ratingDTO);
     }
 
-    @PutMapping("/updaterating")
+    @PutMapping("/rating")
     public RatingDTO updateRating(@RequestBody RatingDTO ratingDTO) {
         return ratingService.updateRating(ratingDTO);
     }
 
-    @DeleteMapping("/deleterating/{ratingId}")
+    @DeleteMapping("/rating/{ratingId}")
     public String deleteRating(@PathVariable Integer ratingId) {
         return ratingService.deleteRating(ratingId);
     }
