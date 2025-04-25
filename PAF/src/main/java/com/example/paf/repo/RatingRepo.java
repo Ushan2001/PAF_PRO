@@ -10,4 +10,7 @@ import org.springframework.stereotype.Repository;
 public interface RatingRepo extends JpaRepository<Rating, Integer> {
     @Query(value = "SELECT * FROM rating WHERE id = ?1", nativeQuery = true )
     Rating getRatingBy(Integer ratingId);
+
+
+
 }

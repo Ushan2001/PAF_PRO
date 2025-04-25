@@ -14,10 +14,12 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Data
 
-public class Rating {
+public class LearningPlan {
     @Id
-    //@GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    private int postid;
-    private int level;
+    private String imageUrl;
+    private String title;
+    private String description;
+    private String pdfUrl;
 }
