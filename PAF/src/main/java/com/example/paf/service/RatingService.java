@@ -1,9 +1,6 @@
 package com.example.paf.service;
 
-
-import com.example.paf.dto.PostDTO;
 import com.example.paf.dto.RatingDTO;
-import com.example.paf.model.Post;
 import com.example.paf.model.Rating;
 import com.example.paf.repo.RatingRepo;
 import jakarta.transaction.Transactional;
@@ -16,7 +13,6 @@ import java.util.List;
 
 @Service
 @Transactional
-
 public class RatingService {
 
     @Autowired
@@ -25,7 +21,7 @@ public class RatingService {
     @Autowired
     private ModelMapper modelMapper;
 
-    public List<RatingDTO> getAllOrders() {
+    public List<RatingDTO> getAllRatings() {
         List<Rating> ratingList = ratingRepo.findAll();
         return modelMapper.map(ratingList, new TypeToken<List<RatingDTO>>() {
         }.getType());
@@ -48,6 +44,9 @@ public class RatingService {
 
     public RatingDTO getRatingById(Integer ratingId) {
         Rating rating = ratingRepo.getRatingBy(ratingId);
+        if (rating == null) {
+            throw new RuntimeException("Rating not found for ID: " + ratingId);
+        }
         return modelMapper.map(rating, RatingDTO.class);
     }
 }
